@@ -7,7 +7,7 @@ import { auth } from 'firebase';
   providedIn: 'root'
 })
 export class FireauthServiceService {
-  @Injectable()
+
   constructor(public afAuth: AngularFireAuth) { 
 
   }
