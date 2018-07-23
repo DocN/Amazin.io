@@ -21,6 +21,7 @@
 }
 
 .navUserInfo {
+    text-align:right;
     color:white;
 }
 
@@ -44,3 +45,35 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.signupText {
+    color:white;
+    font-size:14px;
+}
+
+.signupLink {
+    color:#56a3db;
+    font-size:14px;
+}
+
+.breakerLine {
+    width:100%;
+    border-style:solid;
+    border-width:1px;
+    border-bottom-color:grey;
+}
+
+.topRow {
+    padding-top:2px;
+}
+
+.loginRow {
+    padding-top:2px;
+}
+.oauthlogos {
+    width:20px;
+    height:20px;
+    padding:2px;
+}
+
+

@@ -8,7 +8,7 @@
       <div class="col-4">
         
       </div>
-      <div class="col-3">
+      <div class="col-4">
         <div class="pull-right">
           <div *ngIf="session.afAuth.user | async as user; else showLogin">
             <div class="container-fluid dropdown">
@@ -21,11 +21,26 @@
                   Current Earnings: $63.50 <br>
                   Lifetime Earnings: $125.25
                   <hr>
-                  Logout
+                  <div (click)="logout()">Logout</div>
                 </div>
               </div>
             </div>
           </div>
+          <ng-template #showLogin>
+            <div class="container-fluid">
+              <div class="row topRow">
+                <div class="signupText">New to Amazin'? <a class="signupLink" href="#">Sign Up Now!</a></div>
+              </div>
+              <div class="row">
+                <div class="breakerLine"></div>
+              </div>
+              <div class="row loginRow">
+                <div class="signupText">Already a Member? <a class="signupLink" href="#" (click)="login()">Login</a></div>
+                <img class="oauthlogos" src="../../assets/images/oauth/fb_logo.png">
+                <img class="oauthlogos" src="../../assets/images/oauth/google_logo.png">
+              </div>
+            </div>
+          </ng-template>
         </div>
       </div>
   </div>

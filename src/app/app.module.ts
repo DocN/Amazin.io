@@ -19,6 +19,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { GiftDisplayComponent } from './gift-display/gift-display.component';
+import { FrontDealsComponent } from './front-deals/front-deals.component';
 
 const appRoutes:Routes = [
   {
@@ -32,7 +34,9 @@ const appRoutes:Routes = [
     AppComponent,
     NavbarComponent,
     MainPageComponent,
-    ExplainBannerComponent
+    ExplainBannerComponent,
+    GiftDisplayComponent,
+    FrontDealsComponent
   ],
   imports: [
     BrowserModule,
