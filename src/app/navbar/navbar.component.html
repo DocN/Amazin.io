@@ -1,0 +1,33 @@
+<div class="container-fluid navbarBG">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <img class="logo pull-left" src="../../assets/images/logo.png">
+        <div class="logoText pull-left">Amazin'.io</div>
+      </div>
+      <div class="col-4">
+        
+      </div>
+      <div class="col-3">
+        <div class="pull-right">
+          <div *ngIf="session.afAuth.user | async as user; else showLogin">
+            <div class="container-fluid dropdown">
+              <div class="row">
+                <div class="navUserInfo">Welcome, {{user.displayName}}</div>
+              </div>
+              <div class="row">
+                <span class="dropdown navUserInfo"> Your Current Earnings: $63.50</span>
+                <div class="dropdown-content">
+                  Current Earnings: $63.50 <br>
+                  Lifetime Earnings: $125.25
+                  <hr>
+                  Logout
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
