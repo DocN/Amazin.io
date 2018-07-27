@@ -48,8 +48,8 @@
           <div class="row emailLogin">
             <div class="col-1"></div>
             <div class="col-10">
-              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-              <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+                <input name="lEmail" [(ngModel)]="loginModel.lEmail" #lEmail="ngModel" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                <input name="lPassword" [(ngModel)]="loginModel.lPassword" #lPassword="ngModel"type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
             </div>
             <div class="col-1"></div> 
           </div>
@@ -76,7 +76,7 @@
           <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-              <div class="already">Already have an account? <a href="#"(click)="openLoginModal()">Log In</a></div>
+              <div class="already">Don't have an account? <a href="#"(click)="openSignupModal()">Sign Up</a></div>
             </div>
             <div class="col-2"></div>
           </div>
@@ -88,9 +88,9 @@
           <div class="row emailLogin">
             <div class="col-1"></div>
             <div class="col-10">
-              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-              <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-              <input type="repassword" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Retype Password">
+              <input name="sEmail" [(ngModel)]="signupModel.sEmail" #sEmail="ngModel" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+              <input name="sPassword" [(ngModel)]="signupModel.sPassword" #sPassword="ngModel"type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+              <input name="rPassword" [(ngModel)]="signupModel.rPassword" #rPassword="ngModel" type="epassword" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Retype Password">
             </div>
             <div class="col-1"></div> 
           </div>

@@ -16,6 +16,9 @@ export class LoginPortalComponent implements OnInit {
   @ViewChild('basicModal') public autoShownModal:ModalDirective;
   private userData;
   private loginSignup;
+  //storing credentials
+  private signupModel: any = {};
+  private loginModel: any = {};
 
   constructor(private session:FireauthServiceService, private spinner: NgxSpinnerService) { 
     this.session.afAuth.user.subscribe(
@@ -41,7 +44,7 @@ export class LoginPortalComponent implements OnInit {
     this.loginSignup = false;
     this.autoShownModal.show();
   }
-  
+
   closeModal() {
     this.autoShownModal.hide();
   }

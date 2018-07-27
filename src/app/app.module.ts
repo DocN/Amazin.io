@@ -27,6 +27,9 @@ import { LoginPortalComponent } from './login-portal/login-portal.component';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
+import { FormsModule } from '@angular/forms';
+
+
 
 const appRoutes:Routes = [
   {
@@ -47,6 +50,7 @@ const appRoutes:Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
