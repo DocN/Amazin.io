@@ -31,13 +31,13 @@
           <ng-template #showLogin>
             <div class="container-fluid">
               <div class="row topRow">
-                <div class="signupText">New to Amazin'? <a class="signupLink" href="#">Sign Up Now!</a></div>
+                <div class="signupText">New to Amazin'? <a class="signupLink" href="#" (click)="LoginFrame.openSignupModal()">Sign Up Now!</a></div>
               </div>
               <div class="row">
                 <div class="breakerLine"></div>
               </div>
               <div class="row loginRow">
-                <div class="signupText">Already a Member? <a class="signupLink" href="#" (click)="login()">Login</a></div>
+                <div class="signupText">Already a Member? <a class="signupLink" href="#" (click)="LoginFrame.openLoginModal()">Login</a></div>
                 <img class="oauthlogos" src="../../assets/images/oauth/fb_logo.png">
                 <img class="oauthlogos" src="../../assets/images/oauth/google_logo.png">
               </div>
@@ -47,4 +47,7 @@
       </div>
   </div>
 </div>
+
+<app-login-portal #LoginFrame="child"></app-login-portal>
+
 

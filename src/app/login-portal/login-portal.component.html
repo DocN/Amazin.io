@@ -5,7 +5,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div class="loginText">Log In</div>
+            <div class="loginText" *ngIf="this.loginSignup == true">Log In</div>
+            <div class="loginText" *ngIf="this.loginSignup == false">Sign Up</div>
           </div>
         </div>
         <div class="row">
@@ -20,13 +21,13 @@
           </div>
           <div class="col-3">
             <div class="oauthicon FBObject pull-right">
-              <a href="#" class="fa fa-facebook"></a>
+              <a href="#"(click)="checkLoginStatus()" class="fa fa-facebook"></a>
               <div class="FBText">Facebook</div>
             </div>
           </div>
           <div class="col-3">
             <div class="oauthicon GoogleObject pull-left">
-              <a href="#" class="fa fa-google"></a>
+              <a href="#" (click)="loginGoogle()" class="fa fa-google"></a>
               <div class="FBText">Google</div>
             </div>
           </div>
@@ -42,36 +43,89 @@
           </div>
           <div class="col-4"><hr></div>
         </div>
+        <!-- Login Email Box -->
+        <div *ngIf="this.loginSignup == true" class="loginEmail">
+          <div class="row emailLogin">
+            <div class="col-1"></div>
+            <div class="col-10">
+              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+              <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+            </div>
+            <div class="col-1"></div> 
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <!-- Default checked -->
+            <div class="col-4">
+              <div class="rememberMe col-centered">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+                <label class="custom-control-label labelRemember" for="defaultChecked2">Remember me</label>
+              </div>
+              </div>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <button type="button" class="btn btn-info loginButton">Login</button>
+            </div>
+            <div class="col-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <div class="already">Already have an account? <a href="#"(click)="openLoginModal()">Log In</a></div>
+            </div>
+            <div class="col-2"></div>
+          </div>
+        </div>
+        <!-- Login Email Box END -->
 
-        <div class="row emailLogin">
-          <div class="col-1"></div>
-          <div class="col-10">
-            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-          </div>
-          <div class="col-1"></div> 
-        </div>
-        <div class="row">
-          <div class="col-4"></div>
-          <!-- Default checked -->
-          <div class="col-4">
-            <div class="rememberMe col-centered">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
-              <label class="custom-control-label labelRemember" for="defaultChecked2">Remember me</label>
+        <!-- Signup with Email box BEGIN -->
+        <div *ngIf="this.loginSignup == false" class="loginEmail">
+          <div class="row emailLogin">
+            <div class="col-1"></div>
+            <div class="col-10">
+              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+              <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+              <input type="repassword" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Retype Password">
             </div>
+            <div class="col-1"></div> 
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <!-- Default checked -->
+            <div class="col-4">
+              <div class="rememberMe col-centered">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+                <label class="custom-control-label labelRemember" for="defaultChecked2">Remember me</label>
+              </div>
+              </div>
             </div>
+            <div class="col-4"></div>
           </div>
-          <div class="col-4"></div>
-        </div>
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
-            <button type="button" class="btn btn-info loginButton">Login</button>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <button type="button" class="btn btn-info loginButton">Create Account!</button>
+            </div>
+            <div class="col-2"></div>
           </div>
-          <div class="col-2"></div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <div class="already">Already have an account? <a href="#"(click)="openLoginModal()">Log In</a></div>
+            </div>
+            <div class="col-2"></div>
+          </div>
         </div>
+        <!-- Signup with Email box END-->
       </div>
     </div>
   </div>
 </div>
+
+

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import {ModalDirective} from 'ngx-bootstrap';
+import { auth } from 'firebase';
+import { FireauthServiceService } from '../fireauth-service.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login-portal',
@@ -11,15 +14,48 @@ import {ModalDirective} from 'ngx-bootstrap';
 export class LoginPortalComponent implements OnInit {
 
   @ViewChild('basicModal') public autoShownModal:ModalDirective;
+  private userData;
+  private loginSignup;
 
-  constructor() { 
+  constructor(private session:FireauthServiceService, private spinner: NgxSpinnerService) { 
+    this.session.afAuth.user.subscribe(
+      (data) => {
+        this.userData = data;
+        if(this.userData != null) {
+          this.closeModal();
+        }
+      }
+    )
   }
 
   ngOnInit() {
+    this.loginSignup = true;
   }
 
-  openModal() {
+  openLoginModal() {
+    this.loginSignup = true;
     this.autoShownModal.show();
+  }
+
+  openSignupModal() {
+    this.loginSignup = false;
+    this.autoShownModal.show();
+  }
+  
+  closeModal() {
+    this.autoShownModal.hide();
+  }
+
+  loginGoogle() {
+    this.session.loginGoogle();
+  }
+
+  logout() {
+    this.session.afAuth.auth.signOut();
+  }
+
+  checkLoginStatus() {
+    console.log();
   }
 
 }

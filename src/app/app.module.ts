@@ -25,6 +25,8 @@ import { LoginPortalComponent } from './login-portal/login-portal.component';
 
 
 import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 const appRoutes:Routes = [
   {
@@ -51,7 +53,8 @@ const appRoutes:Routes = [
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(appRoutes, {useHash: true}),
-    NgxSmartModalModule.forRoot()
+    NgxSmartModalModule.forRoot(),
+    NgxSpinnerModule
   ],
   schemas: [ 
     NO_ERRORS_SCHEMA 
