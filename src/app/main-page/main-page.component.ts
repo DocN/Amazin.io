@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSmartModalService } from 'ngx-smart-modal';
 
 @Component({
   selector: 'app-main-page',
@@ -6,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-
-  constructor() { }
+  constructor(public ngxSmartModalService: NgxSmartModalService) { }
 
   ngOnInit() {
   }
-
 }

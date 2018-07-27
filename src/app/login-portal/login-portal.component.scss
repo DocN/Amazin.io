@@ -1,0 +1,210 @@
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 80px;
+    
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+  
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  
+  .fa-skype {
+    background: #00aff0;
+    color: white;
+  }
+  
+  .fa-android {
+    background: #a4c639;
+    color: white;
+  }
+  
+  .fa-dribbble {
+    background: #ea4c89;
+    color: white;
+  }
+  
+  .fa-vimeo {
+    background: #45bbff;
+    color: white;
+  }
+  
+  .fa-tumblr {
+    background: #2c4762;
+    color: white;
+  }
+  
+  .fa-vine {
+    background: #00b489;
+    color: white;
+  }
+  
+  .fa-foursquare {
+    background: #45bbff;
+    color: white;
+  }
+  
+  .fa-stumbleupon {
+    background: #eb4924;
+    color: white;
+  }
+  
+  .fa-flickr {
+    background: #f40083;
+    color: white;
+  }
+  
+  .fa-yahoo {
+    background: #430297;
+    color: white;
+  }
+  
+  .fa-soundcloud {
+    background: #ff5500;
+    color: white;
+  }
+  
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+  
+  .fa-rss {
+    background: #ff6600;
+    color: white;
+  }
+  
+.loginFrame {
+    margin-top:200px;
+    background-color:#ffffff;
+    width:540px;
+    height:700px;
+    padding:20px;
+}
+
+.loginText {
+    text-align:center;
+    font-size:50px;
+    font-weight:500;
+    color:#3a4954;
+}
+
+.loginWith {
+    text-align:center;
+    font-size:20px;
+    color:#b5abb8;
+    margin-bottom:20px;
+}
+
+.centerObject {
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.FBObject {
+    margin-right:-10px;
+}
+
+.GoogleObject {
+    margin-left:-10px;
+}
+.FBText {
+    text-align:center;
+    font-size:12px;
+    font-weight:300;
+}
+
+.oauthicon {
+    width:85px;
+    height:100px;
+}
+
+.orEmail {
+    text-align:center;
+    margin-top:20px;
+    font-weight:500;
+    color:#b5abb8;
+}
+
+hr {
+    margin-top:40px;
+    border-width:2px;
+}
+
+.emailLogin {
+    margin-top:20px;
+}
+
+.loginText {
+    width:100%;
+}
+.loginButton {
+    text-align:center;
+    width:100%;
+    margin:0px;
+}
+.rememberMe {
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:10px;
+}
+
+.labelRemember {
+    text-align:center;
+    margin:0;
+}
+
+.nopad {
+    padding:0;
+    margin:0;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

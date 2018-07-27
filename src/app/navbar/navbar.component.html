@@ -18,10 +18,12 @@
               <div class="row">
                 <span class="dropdown navUserInfo"> Your Current Earnings: $63.50</span>
                 <div class="dropdown-content">
-                  Current Earnings: $63.50 <br>
-                  Lifetime Earnings: $125.25
+                  <div class="currentEarning pull-left">Current Earnings: </div><div class="pull-right amount"> $63.50 </div> <br>
+                  <div class="currentEarning pull-left">Lifetime Earnings: </div><div class="pull-right amount"> $103.50 </div> <br>
                   <hr>
-                  <div (click)="logout()">Logout</div>
+                  <a class="logoutLink" href="" (click)="logout()">My Account</a> <br>
+                  <a class="logoutLink" href="" (click)="logout()">Logout</a>
+                  
                 </div>
               </div>
             </div>

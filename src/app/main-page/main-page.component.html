@@ -1,6 +1,10 @@
 <div class="backgroundColor">
-<app-navbar></app-navbar>
-<app-explain-banner></app-explain-banner>
-<app-gift-display></app-gift-display>
-<app-front-deals></app-front-deals>
-</div>
+        <app-navbar></app-navbar>
+        <app-explain-banner></app-explain-banner>
+        <app-gift-display></app-gift-display>
+        <app-front-deals></app-front-deals>
+        <app-login-portal #c="child"></app-login-portal>
+        
+</div> 
+
+<button type="button" class="btn btn-primary" (click)="c.openModal(autoShownModal)">Create modal with component</button>

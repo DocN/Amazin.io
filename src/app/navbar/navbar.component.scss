@@ -31,18 +31,22 @@
 }
 
 .dropdown-content {
-    margin-top:24px;
-    margin-left:-20px;
+    margin-top:25px;
+    margin-left:-2px;
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    min-width: 300px;
+    background-color: #24292e;
+    min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
+    border-color:grey;
+    border-style: solid;
+    border-radius:2px;
+    border-width:1px;
     display: block;
 }
 
@@ -76,4 +80,26 @@
     padding:2px;
 }
 
+.logoutLink {
+    color:#1aa5e2;
+}
+
+logoutLink:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.currentEarning {
+    color:white;
+}
+
+.amount {
+    color:#1aa5e2;
+    margin-left:5px;
+}
+
+hr{
+    border-top: 1px solid grey;
+}
 
