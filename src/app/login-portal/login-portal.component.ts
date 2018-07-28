@@ -61,4 +61,9 @@ export class LoginPortalComponent implements OnInit {
     console.log();
   }
 
+  //signup account
+  signupButton() {
+    this.session.signup(this.signupModel.sEmail, this.signupModel.rPassword);
+  }
+
 }
