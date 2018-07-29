@@ -85,12 +85,17 @@
 
         <!-- Signup with Email box BEGIN -->
         <div *ngIf="this.loginSignup == false" class="loginEmail">
+          <div class="row">
+            <div class="errorColor" *ngIf="sEmail.errors?.email"> 
+                Primary Email not valid.
+            </div> 
+          </div>
           <div class="row emailLogin">
             <div class="col-1"></div>
             <div class="col-10">
-              <input name="sEmail" [(ngModel)]="signupModel.sEmail" #sEmail="ngModel" type="email" class="form-control mb-4" placeholder="E-mail">
-              <input name="sPassword" [(ngModel)]="signupModel.sPassword" #sPassword="ngModel"type="password" class="form-control mb-4" placeholder="Password">
-              <input name="rPassword" [(ngModel)]="signupModel.rPassword" #rPassword="ngModel" type="password" class="form-control mb-4" placeholder="Retype Password">
+              <input name="sEmail" [(ngModel)]="signupModel.sEmail" #sEmail="ngModel" type="email" class="form-control mb-4" placeholder="E-mail" email="true">
+              <input (keyup)="validatePasswordSignup()" name="sPassword" [(ngModel)]="signupModel.sPassword" #sPassword="ngModel"type="password" class="form-control mb-4" placeholder="Password">
+              <input (keyup)="validatePasswordSignup()" name="rPassword" [(ngModel)]="signupModel.rPassword" #rPassword="ngModel" type="password" class="form-control mb-4" placeholder="Retype Password">
             </div>
             <div class="col-1"></div> 
           </div>

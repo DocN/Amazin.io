@@ -20,6 +20,9 @@ export class LoginPortalComponent implements OnInit {
   private signupModel: any = {};
   private loginModel: any = {};
 
+  private errorMsg;
+  private signupPasswordValid;
+
   constructor(private session:FireauthServiceService, private spinner: NgxSpinnerService) { 
     this.session.afAuth.user.subscribe(
       (data) => {
@@ -33,6 +36,7 @@ export class LoginPortalComponent implements OnInit {
 
   ngOnInit() {
     this.loginSignup = true;
+    this.signupPasswordValid = true;
   }
 
   openLoginModal() {
@@ -63,7 +67,30 @@ export class LoginPortalComponent implements OnInit {
 
   //signup account
   signupButton() {
-    this.session.signup(this.signupModel.sEmail, this.signupModel.rPassword);
+    if(!this.validateSignup()) {
+      
+    }
+    else {
+      this.session.signup(this.signupModel.sEmail, this.signupModel.rPassword);
+    }
+  }
+
+  //validate signup
+  validateSignup() {
+    var valid = true;
+    //valid repasssword
+    if(this.signupPasswordValid == false) {
+      valid = false;
+    }
+    return valid;
+  }
+
+  validatePasswordSignup() {
+    if(this.signupModel.sPassword != this.signupModel.rPassword) {
+      this.signupPasswordValid = false;
+      return;
+    }
+    this.signupPasswordValid = true;
   }
 
 }

@@ -16,6 +16,7 @@ export class FireauthServiceService {
       }
     )
   }
+  
   loginGoogle() {
     this.afAuth
       .auth
