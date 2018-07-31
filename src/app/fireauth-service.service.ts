@@ -9,6 +9,7 @@ import { auth } from 'firebase';
 })
 export class FireauthServiceService {
   private userData;
+  public signupError;
   constructor(public afAuth: AngularFireAuth) { 
     this.afAuth.user.subscribe(
       (data) => {
@@ -37,6 +38,7 @@ export class FireauthServiceService {
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
+        this.signupError = err.message;
       });    
   }
 
