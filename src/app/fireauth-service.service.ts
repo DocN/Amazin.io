@@ -29,7 +29,7 @@ export class FireauthServiceService {
       });
   }
 
-  signup(email: string, password: string) {
+  signup(email: string, password: string, firstname: string, lastname: string) {
     this.afAuth
       .auth
       .createUserWithEmailAndPassword(email, password)
@@ -37,9 +37,8 @@ export class FireauthServiceService {
         if(this.afAuth.auth.currentUser.emailVerified == false) {
           this.afAuth.auth.currentUser.sendEmailVerification().then(
             (success) => {
-              console.log(this.afAuth.auth.currentUser.emailVerified);
+            this.applyDisplayName(firstname + " " + lastname);
             console.log("please verify your email");
-            this.logout();
           } 
           ).catch(
             (err) => {
@@ -53,6 +52,19 @@ export class FireauthServiceService {
         console.log('Something went wrong:',err.message);
         this.signupError = err.message;
       });    
+  }
+
+  applyDisplayName(name: string) {
+    var user = this.afAuth.auth.currentUser;
+    user.updateProfile({
+      displayName: name,
+      photoURL: ""
+    }).then(function(response) {
+      //Success
+    }, function(error) {
+      //Error
+      console.log(error);
+    });
   }
 
 

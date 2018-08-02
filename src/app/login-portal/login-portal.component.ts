@@ -81,8 +81,17 @@ export class LoginPortalComponent implements OnInit {
       }
     }
     else {
-      this.session.signup(this.signupModel.sEmail, this.signupModel.rPassword);
+      this.session.signup(this.signupModel.sEmail, this.signupModel.rPassword, this.signupModel.firstname, this.signupModel.lastname);
+      this.clearFields();
     }
+  }
+
+  clearFields() {
+    this.signupModel.sEmail = "";
+    this.signupModel.rPassword = "";
+    this.signupModel.sPassword = "";
+    this.signupModel.firstname = "";
+    this.signupModel.lastname = "";
   }
 
   //validate signup

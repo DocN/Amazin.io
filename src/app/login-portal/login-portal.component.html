@@ -112,7 +112,17 @@
             </div>
           </div>
 
-          <div class="row emailLogin">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5">
+              <input name="firstname" [(ngModel)]="signupModel.firstname" #sEmail="ngModel" type="text" class="form-control mb-4 pull-right" placeholder="First Name">
+            </div>
+            <div class="col-5">
+              <input name="lastname" [(ngModel)]="signupModel.lastname" #sEmail="ngModel" type="text" class="form-control mb-4 pull-left" placeholder="Last Name">
+            </div>
+            <div class="col-1"></div>
+          </div>
+          <div class="row">
             <div class="col-1"></div>
             <div class="col-10">
               <input name="sEmail" [(ngModel)]="signupModel.sEmail" #sEmail="ngModel" type="email" class="form-control mb-4" placeholder="E-mail" email="true">
