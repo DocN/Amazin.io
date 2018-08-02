@@ -70,7 +70,15 @@ export class LoginPortalComponent implements OnInit {
   //signup account
   signupButton() {
     if(!this.validateSignup()) {
-      
+      if(this.signupPasswordLength == false) {
+        this.errorMsg = "Invalid password length, please make sure your password is at least 6 characters";
+      }
+      else if(this.signupPasswordValid == false) {
+        this.errorMsg = "Retyped password does not match the original password";
+      }
+      else {
+        this.errorMsg = "";
+      }
     }
     else {
       this.session.signup(this.signupModel.sEmail, this.signupModel.rPassword);
@@ -89,7 +97,7 @@ export class LoginPortalComponent implements OnInit {
     if(this.signupPasswordLength == false) {
       valid = false;
     }
-    
+    console.log(valid);
     return valid;
   }
 
@@ -105,7 +113,6 @@ export class LoginPortalComponent implements OnInit {
   }
 
   validatePasswordSignupLength() {
-    console.log("here");
     if(this.signupModel.sPassword && this.signupModel.rPassword){
       if(this.signupModel.sPassword.length < 6 || this.signupModel.rPassword.length < 6) {
         this.signupPasswordLength = false;

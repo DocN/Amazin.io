@@ -34,7 +34,20 @@ export class FireauthServiceService {
       .auth
       .createUserWithEmailAndPassword(email, password)
       .then(value => {
-        console.log('Success!', value);
+        if(this.afAuth.auth.currentUser.emailVerified == false) {
+          this.afAuth.auth.currentUser.sendEmailVerification().then(
+            (success) => {
+              console.log(this.afAuth.auth.currentUser.emailVerified);
+            console.log("please verify your email");
+            this.logout();
+          } 
+          ).catch(
+            (err) => {
+              console.log(err);
+            }
+          )
+          console.log('Success!', value);
+        }
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
