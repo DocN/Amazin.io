@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { auth } from 'firebase';
 import { FireauthServiceService } from '../fireauth-service.service';
+import { UserServiceService } from '../user-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,11 @@ import { FireauthServiceService } from '../fireauth-service.service';
 })
 export class NavbarComponent implements OnInit {
   
-  constructor(private session:FireauthServiceService) { }
+
+
+  constructor(private session:FireauthServiceService, private userService:UserServiceService) { 
+    console.log(this.userService.users);
+  }
 
   ngOnInit() {
   }
@@ -20,4 +25,5 @@ export class NavbarComponent implements OnInit {
   logout() {
     this.session.afAuth.auth.signOut();
   }
+  
 }

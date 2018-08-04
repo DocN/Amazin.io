@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Component } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { auth } from 'firebase';
+import { UserServiceService } from './user-service.service';
 
 
 @Injectable({
@@ -10,7 +12,7 @@ import { auth } from 'firebase';
 export class FireauthServiceService {
   private userData;
   public signupError;
-  constructor(public afAuth: AngularFireAuth) { 
+  constructor(public afAuth: AngularFireAuth, private userService: UserServiceService) { 
     this.afAuth.user.subscribe(
       (data) => {
         this.userData = data;
@@ -46,6 +48,7 @@ export class FireauthServiceService {
             }
           )
           console.log('Success!', value);
+          this.userService.loadUserID(this.afAuth.auth.currentUser.uid, this.afAuth.auth.currentUser.displayName);
         }
       })
       .catch(err => {
