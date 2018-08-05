@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(private session:FireauthServiceService, private userService:UserServiceService) { 
-    console.log(this.userService.users);
+    //console.log(this.userService.users);
   }
 
   ngOnInit() {

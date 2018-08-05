@@ -48,7 +48,7 @@ export class FireauthServiceService {
             }
           )
           console.log('Success!', value);
-          this.userService.loadUserID(this.afAuth.auth.currentUser.uid, this.afAuth.auth.currentUser.displayName);
+          this.userService.loadUserID(this.afAuth.auth.currentUser.uid, firstname, lastname);
         }
       })
       .catch(err => {

@@ -1,6 +1,9 @@
-export class User {
-    public userID: string;
-    public displayname: string;
-    public currentBalance: number = 0.00;
-    public lifeTimeEarning: number = 0.00;
+export interface User {
+    userID: string;
+    firstname: string;
+    lastname: string;
+    currentBalance: number;
+    lifeTimeEarning: number;
+    address: string; 
+    country: string;
 }
