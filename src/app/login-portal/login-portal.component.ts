@@ -24,6 +24,9 @@ export class LoginPortalComponent implements OnInit {
   private signupPasswordValid;
   private signupPasswordLength;
 
+  private loginErrorMsg;
+
+
   constructor(private session:FireauthServiceService, private spinner: NgxSpinnerService) { 
     this.session.afAuth.user.subscribe(
       (data) => {
@@ -65,6 +68,13 @@ export class LoginPortalComponent implements OnInit {
 
   checkLoginStatus() {
     console.log();
+  }
+
+  //login via email
+  loginButton() {
+    if(this.loginModel.lEmail && this.loginModel.lPassword) {
+      this.session.signinEmail(this.loginModel.lEmail, this.loginModel.lPassword);
+    }
   }
 
   //signup account

@@ -74,5 +74,20 @@ export class FireauthServiceService {
   logout() {
     this.afAuth.auth.signOut();
   }
+
+  signinEmail(email: string, password: string) {
+    console.log(email);
+    this.afAuth
+    .auth
+    .signInAndRetrieveDataWithEmailAndPassword(email, password)
+    .then(value => {
+      console.log(this.afAuth.auth.currentUser.displayName);
+      console.log('Success!', value);
+    })
+    .catch(err => {
+      console.log('Something went wrong:',err.message);
+      this.signupError = err.message;
+    });   
+  }
 }
 

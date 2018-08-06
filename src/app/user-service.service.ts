@@ -20,6 +20,8 @@ export class UserServiceService {
   private firstname: string;
   private lastname: string;
 
+  //current user data object
+  currentUser = <User>{};
 
   constructor(private afs: AngularFirestore, public afAuth: AngularFireAuth) {
     this.currentUserID = "";
@@ -35,6 +37,10 @@ export class UserServiceService {
           //array of user data 
           this.userData = firedata;
           console.log(this.userData);
+          //check if we have our user data
+          if(this.userData.length > 0) {
+            this.currentUser = this.userData[0];
+          }
           //check if a profile already exists
         });
       }
