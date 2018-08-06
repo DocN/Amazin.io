@@ -4,7 +4,6 @@ import {ModalDirective} from 'ngx-bootstrap';
 import { auth } from 'firebase';
 import { FireauthServiceService } from '../fireauth-service.service';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { FireauthServiceService } from '../fireauth-service.service';
 
 @Component({
   selector: 'app-login-portal',
