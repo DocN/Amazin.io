@@ -56,6 +56,7 @@ export class LoginPortalComponent implements OnInit {
 
   closeModal() {
     this.autoShownModal.hide();
+    this.clearFields();
   }
 
   loginGoogle() {
@@ -79,6 +80,8 @@ export class LoginPortalComponent implements OnInit {
 
   //signup account
   signupButton() {
+    this.errorMsg = "";
+
     if(!this.validateSignup()) {
       if(this.signupPasswordLength == false) {
         this.errorMsg = "Invalid password length, please make sure your password is at least 6 characters";
@@ -92,7 +95,6 @@ export class LoginPortalComponent implements OnInit {
     }
     else {
       this.session.signup(this.signupModel.sEmail, this.signupModel.rPassword, this.signupModel.firstname, this.signupModel.lastname);
-      this.clearFields();
     }
   }
 
@@ -139,6 +141,18 @@ export class LoginPortalComponent implements OnInit {
       else {
         this.signupPasswordLength = true;
       }
+    }
+  }
+
+  signupOnKey($event) {
+    if($event.code == "Enter") {
+      this.signupButton();
+    }
+  }
+
+  loginOnKey($event) {
+    if($event.code == "Enter") {
+      this.loginButton();
     }
   }
 }
