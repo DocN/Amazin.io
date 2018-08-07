@@ -28,6 +28,7 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { FormsModule } from '@angular/forms';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 
@@ -46,7 +47,8 @@ const appRoutes:Routes = [
     ExplainBannerComponent,
     GiftDisplayComponent,
     FrontDealsComponent,
-    LoginPortalComponent
+    LoginPortalComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

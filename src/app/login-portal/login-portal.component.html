@@ -45,6 +45,13 @@
         </div>
         <!-- Login Email Box -->
         <div *ngIf="this.loginSignup == true" class="loginEmail">
+          <div class="row">
+            <div class="col-12">
+              <div class="errorColor"> 
+                  {{session.signinError}}
+              </div>
+            </div>
+          </div>
           <div class="row emailLogin">
             <div class="col-1"></div>
             <div class="col-10">

@@ -21,6 +21,7 @@
 }
 
 .navUserInfo {
+    font-family: 'proxima-nova', sans-serif;
     min-width:250px;
     text-align:right;
     color:white;
@@ -102,3 +103,12 @@ hr{
     border-top: 1px solid grey;
 }
 
+.highlight {
+    margin-left:5px;
+    color:#1aa5e2;
+}
+
+.arrowMargin {
+    margin-left:5px;
+    font-weight:bold;
+}

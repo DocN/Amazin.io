@@ -13,10 +13,10 @@
           <div *ngIf="session.afAuth.user | async as user; else showLogin">
             <div class="container-fluid dropdown">
               <div class="row">
-                <div class="navUserInfo">Welcome, {{this.userService.currentUser.firstname}}</div>
+                <div class="navUserInfo">Welcome, <div class="highlight pull-right">{{this.userService.currentUser.firstname}}</div></div>
               </div>
               <div class="row">
-                <span class="dropdown navUserInfo pull-right"> Your Current Earnings: ${{this.userService.currentUser.currentBalance}}</span>
+                <span class="dropdown navUserInfo pull-right"> Your Current Earnings: <div class="highlight pull-right">${{this.userService.currentUser.currentBalance}} <i class="fa fa-chevron-down arrowMargin"></i></div></span>
                 <div class="dropdown-content">
                   <div class="currentEarning pull-left">Current Earnings: </div><div class="pull-right amount"> ${{this.userService.currentUser.currentBalance}} </div> <br>
                   <div class="currentEarning pull-left">Lifetime Earnings: </div><div class="pull-right amount"> ${{this.userService.currentUser.lifeTimeEarning}} </div> <br>

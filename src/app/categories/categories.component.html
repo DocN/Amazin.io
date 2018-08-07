@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="spacing"></div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="giftTitle">
+        Our Amazin' Cashback Rates!
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div *ngFor="let currentCategory of categoryData;let i = index">
+        <div class="frameItem pull-left" *ngIf="i%5 != 0;else leftFrame">
+          <img class="frameImage" src="../../assets/images/categories/{{currentCategory.Image}}">
+          <div class="itemName">{{currentCategory.CategoryName}}</div>
+          <div class="itemName">{{currentCategory.Rate}}</div>
+        </div>
+        <ng-template #leftFrame>
+          <div class="frameFirstItem pull-left">
+            <img class="frameImage" src="../../assets/images/categories/{{currentCategory.Image}}">
+            <div class="itemName">{{currentCategory.CategoryName}}</div>
+            <div class="itemName">{{currentCategory.Rate}}</div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
