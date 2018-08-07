@@ -16,7 +16,7 @@ export class CategoriesComponent implements OnInit {
 
   constructor(private afs: AngularFirestore) {
     this.categoryCollection = this.afs.collection<CategoryItem>("categories", ref => {
-      return ref;
+      return ref.orderBy("Rank", "asc");
     });
     this.categories = this.categoryCollection.valueChanges();
 
