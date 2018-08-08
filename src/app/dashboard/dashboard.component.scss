@@ -1,0 +1,59 @@
+.backgroundColor {
+    margin-top:30px;
+    background-color:#fafafa;
+}
+
+.overviewBox {
+    background-color:#ffffff;
+    padding:5px;
+    width:25%;
+    height:80px;
+    border-radius:1px;
+    border-color:#e7e3e3;
+    border-style:solid;
+}
+
+.overviewBoxLeft {
+    background-color:#ffffff;
+    padding:5px;
+    width:25%;
+    height:80px;
+    border-radius:1px;
+    border-color:#e7e3e3;
+    border-style:solid;
+    border-left-width: 0;
+}
+
+.boxImage {
+    width:50px;
+    height:50px;
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boxText {
+    font-weight:500;
+    text-align:center;
+}
+
+.money {
+    margin-top:20px;
+    color:green;
+}
+
+.transactionsText {
+    color:#404954;
+    margin-top:20px;
+}
+.spacing {
+    width:100%;
+    margin-top:50px;
+}
+
+.myAccount {
+    margin-top:15px;
+    font-weight:bold;
+    font-size:30px;
+}

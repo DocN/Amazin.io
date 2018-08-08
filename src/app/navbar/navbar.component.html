@@ -3,8 +3,10 @@
   <div class="container">
     <div class="row">
       <div class="col-4">
-        <img class="logo pull-left" src="../../assets/images/logo.png">
-        <div class="logoText pull-left">Amazin'.io</div>
+        <a href="#">
+          <img class="logo pull-left" src="../../assets/images/logo.png">
+          <div class="logoText pull-left">Amazin'.io</div>
+        </a>
       </div>
       <div class="col-4">
         
@@ -22,7 +24,7 @@
                   <div class="currentEarning pull-left">Current Earnings: </div><div class="pull-right amount"> ${{this.userService.currentUser.currentBalance}} </div> <br>
                   <div class="currentEarning pull-left">Lifetime Earnings: </div><div class="pull-right amount"> ${{this.userService.currentUser.lifeTimeEarning}} </div> <br>
                   <hr>
-                  <a class="logoutLink" href="" (click)="logout()">My Account</a> <br>
+                  <a class="logoutLink" href="#/dashboard">My Account</a> <br>
                   <a class="logoutLink" href="" (click)="logout()">Logout</a>
                   
                 </div>

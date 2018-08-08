@@ -29,6 +29,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { FormsModule } from '@angular/forms';
 import { CategoriesComponent } from './categories/categories.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -37,6 +38,10 @@ const appRoutes:Routes = [
     path: '',
     component: MainPageComponent,
   },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  }
 ];
 
 @NgModule({
@@ -48,7 +53,8 @@ const appRoutes:Routes = [
     GiftDisplayComponent,
     FrontDealsComponent,
     LoginPortalComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
