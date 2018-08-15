@@ -11,6 +11,8 @@
     border-radius:1px;
     border-color:#e7e3e3;
     border-style:solid;
+    border-width:1px;
+    border-radius:5px;
 }
 
 .overviewBoxLeft {
@@ -21,7 +23,9 @@
     border-radius:1px;
     border-color:#e7e3e3;
     border-style:solid;
+    border-width:1px;
     border-left-width: 0;
+    border-radius:5px;
 }
 
 .boxImage {
@@ -56,4 +60,87 @@
     margin-top:15px;
     font-weight:bold;
     font-size:30px;
+}
+
+.dashMenu {
+    font-family: 'Ubuntu', sans-serif;
+    background-color:#fafafa;
+}
+
+.dashMenuItemSelected {
+    padding-left:10px;
+    padding-top:10px;
+    text-align:left;
+    font-size:20px;
+    height:50px;
+    width:100%;
+    border-width:1px;
+    border-style:solid;
+    background-color:#ffffff;
+    border-right-width:0px;
+    border-color:#e7e3e3;
+    color:#24292e;
+    font-weight:500;
+}
+
+.dashMenuItem {
+    padding-left:10px;
+    padding-top:10px;
+    text-align:left;
+    font-size:20px;
+    font-weight:500;
+    height:50px;
+    width:100%;
+    border-width:1px;
+    border-style:solid;
+    background-color:#f5f5f5;
+    border-right-width:0px;
+    border-color:#e7e3e3;
+    color:#24292e;
+}
+
+.dashMenuNoBottom {
+    border-bottom-width:0;
+}
+
+.nomargin {
+    margin:0;
+}
+
+.nopaddinglr {
+    padding-left:0;
+    padding-right:0;
+}
+
+.spacing15 {
+    width:100%;
+    margin-top:15px;
+}
+
+.infoTitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-size:30px;
+    font-weight:300;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.whiteBG {
+    background-color:#ffffff;
+}
+
+.infoBorder {
+    border-left-width:0px;
+    border-right-width:1px;
+    border-bottom-width:0px;
+    border-top-width:1px;
+    border-style:solid;
+    border-color:#e7e3e3;
+}
+
+.item {
+    padding-top:8px;
+    text-align:center;
+    color:#24292e;
+    font-weight:500;
 }

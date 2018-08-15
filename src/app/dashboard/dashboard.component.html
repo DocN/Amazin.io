@@ -7,10 +7,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div class="col-4">
                 <div class="myAccount">My Account</div>
             </div>
-            <div class="col-9">
+            <div class="col-8 nopaddinglr">
                 <div class="row">
                     <div class="col-12">
                         <div class="overviewBox pull-left">
@@ -47,6 +47,41 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="spacing15"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 nopaddinglr">
+                <div class="dashMenu">
+                    <div class="dashMenuItemSelected dashMenuNoBottom">
+                        PROFILE
+                    </div>
+                    <div class="dashMenuItem dashMenuNoBottom">
+                        TRANSACTION HISTORY
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12 whiteBG infoBorder">
+                        <div class="infoTitle">PERSONAL INFO</div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row whiteBG">
+                    <div class="col-2">
+                        <div class="item">
+                            EMAIL
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <input name="lEmail" [(ngModel)]="loginModel.lEmail" #lEmail="ngModel" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
                     </div>
                 </div>
             </div>
